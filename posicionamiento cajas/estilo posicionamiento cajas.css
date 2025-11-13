@@ -1,0 +1,35 @@
+
+.caja1 {
+    background-color: blue;
+    border: 2px solid gray;
+    width: 50%;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+.caja2 {
+    background-color: lightyellow;
+    width: 20%;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+.caja3 {
+    background-color: lightcoral;
+    border: double 1px black;
+    width: 20%;
+    height: 50px;
+    float: left;
+    clear: left;
+    text-align: center;
+    line-height: 50px;
+}
