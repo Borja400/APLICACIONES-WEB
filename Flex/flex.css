@@ -1,0 +1,141 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root{
+  --marron: #84250C;
+  --espacio-encabezado: 60px;  
+  --espacio-pie: 50px;         
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--espacio-encabezado);
+  background: var(--marron);
+  color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+
+.header-debajo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 18px;
+}
+
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.main-nav a:hover { text-decoration: underline; }
+
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--espacio-pie);
+  background: var(--marron);
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.15);
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+.contenido {
+  margin: 150px 20% 80px 20%; 
+  max-width: 1000px; 
+}
+
+
+.welcome {
+  margin-bottom: 30px;
+}
+.welcome h2 {
+  margin-bottom: 12px;
+  color: #222;
+}
+.welcome p {
+  color: #333;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+
+.paneles {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+
+.oferta {
+  flex: 1 1 60%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  border: 1px solid #e0e0e0;
+}
+
+.novedades {
+  flex: 0 0 30%;
+  padding: 12px;
+  font-size: 13px;
+}
+
+/* Estilos internos de listas */
+.oferta ul, .novedades ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+/* Ajustes responsive: en pantallas pequeñas apilan todo */
+@media (max-width: 800px){
+  .contenido {
+    margin: 130px 5% 120px 5%;
+  }
+  .paneles {
+    flex-direction: column;
+  }
+  .oferta, .novedades {
+    flex: none;
+    width: 100%;
+  }
+  .main-nav { display: none; } /* simplifica en móvil */
+}
+
