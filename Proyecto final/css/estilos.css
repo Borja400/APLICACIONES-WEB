@@ -1,0 +1,140 @@
+/* Fuente general y reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #1e7f1f, #3bb53d); /* Verde estilo césped */
+  color: white;
+}
+
+/* Header y footer mantienen el estilo que te gusta */
+header, footer {
+  background-color: rgba(0,0,0,0.6);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* TITULOS con color dorado para destacar */
+h1, h2, h3, h4, h5, h6 {
+  color: #FFD700; /* Dorado brillante estilo Zelda */
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Contenido principal */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Párrafos */
+p {
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Imágenes (si usas en about) */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+/* Contenedor responsive para videos con borde dorado */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Ratio 16:9 */
+  padding-top: 25px;
+  height: 0;
+  border: 4px solid #FFD700; /* borde dorado */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,215,0,0.5); /* resplandor dorado */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px; /* esquinas internas redondeadas */
+}
+
+/* FORMULARIO CONTACTO */
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,215,0,0.5);
+}
+
+fieldset {
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: #FFD700;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #FFD700;
+}
+
+button {
+  background-color: #FFD700;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e6c200;
+}
+
+

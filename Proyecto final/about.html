@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Borja Herreros">
+  <meta name="description" content="Información sobre los personajes principales de Zelda Breath of the Wild">
+  <meta name="keywords" content="Zelda, Link, Ganon, personajes, Breath of the Wild">
+  <title>Personajes - Zelda BOTW</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <header>
+    <h1>Personajes Principales</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html" title="Información del juego">About</a></li>
+        <li><a href="datos.html" title="Estadísticas y datos">Datos</a></li>
+        <li><a href="contacto.html" title="Formulario de contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="breadcrumb" class="breadcrumb">
+    <ol>
+      <li><a href="index.html">Inicio</a></li>
+      <li>Personajes</li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <!-- PERSONAJES PRINCIPALES -->
+    <section id="personajes">
+      <article>
+        <h2>Link</h2>
+        <img src="imagenes/link.jpg" alt="Link, protagonista del juego" width="350">
+        <p class="descripcion-img">Link, el héroe elegido por la Espada Maestra.</p>
+        <p>El protagonista del juego. Tras un largo sueño en el Santuario de la Vida, despierta para salvar Hyrule del desastre más grande de su historia.</p>
+      </article>
+
+      <article>
+        <h2>Zelda</h2>
+        <img src="imagenes/zelda.jpg" alt="Zelda, princesa de Hyrule" width="350">
+        <p class="descripcion-img">Zelda, portadora del poder sagrado.</p>
+        <p>La princesa de Hyrule. Su lucha interior es clave para mantener a raya a Ganon mientras espera el despertar de Link.</p>
+      </article>
+
+      <article>
+        <h2 id="ganon">Ganon</h2>
+        <img src="imagenes/ganon.jpg" alt="Ganon, antagonista principal del juego" width="350">
+        <p class="descripcion-img">Ganon, el cataclismo que amenaza el reino.</p>
+        <p>Una entidad maligna que renace cada cierto tiempo. En esta entrega adopta la forma de “Ganon el Cataclismo”.</p>
+      </article>
+    </section>
+
+    <!-- GRID de personajes secundarios -->
+    <section class="grid-personajes">
+      <h2>Personajes Secundarios (Los Elegidos)</h2>
+
+      <div class="tarjeta">
+        <img src="imagenes/mipha.jpg" alt="Mipha, Elegida Zora" width="230">
+        <h3>Mipha</h3>
+        <p>Princesa Zora y piloto de Vah Ruta.</p>
+      </div>
+
+      <div class="tarjeta">
+        <img src="imagenes/rivali.jpg" alt="Revali, Elegido Rito" width="230">
+        <h3>Revali</h3>
+        <p>Guerrero Rito, piloto de Vah Medoh.</p>
+      </div>
+
+      <div class="tarjeta">
+        <img src="imagenes/urbosa.jpg" alt="Urbosa, Elegida Gerudo" width="230">
+        <h3>Urbosa</h3>
+        <p>Jefa Gerudo y piloto de Vah Naboris.</p>
+      </div>
+
+      <div class="tarjeta">
+        <img src="imagenes/daruk.jpg" alt="Daruk, Elegido Goron" width="230">
+        <h3>Daruk</h3>
+        <p>Guerrero Goron, piloto de Vah Rudania.</p>
+      </div>
+    </section>
+
+    <!-- TABLA DE PERSONAJES CON ARMAS Y BESTIAS DIVINAS -->
+    <section>
+      <h2>Tabla de Personajes, Armas y Bestias Divinas</h2>
+      <table border="2" cellpadding="10" cellspacing="0" style="width:100%; border-color:#FFD700; background-color: rgba(0,0,0,0.4);">
+        <tr>
+          <th>Personaje</th>
+          <th>Arma Especial</th>
+          <th>Bestia Divina</th>
+          <th>Descripción</th>
+        </tr>
+
+        <!-- LINK -->
+        <tr>
+          <td><img src="imagenes/link.jpg" alt="Link" width="150"></td>
+          <td><img src="imagenes/espada.jpg" alt="Espada Maestra" width="150"></td>
+          <td><img src="imagenes/ruta.jpg" alt="Bestia Divina Ruta" width="150"></td>
+          <td>Link es el héroe que despierta tras 100 años para salvar Hyrule. Portador de la Espada Maestra y elegido para pilotar la Bestia Divina Ruta.</td>
+        </tr>
+
+        <!-- ZELDA -->
+        <tr>
+          <td><img src="imagenes/zelda.jpg" alt="Zelda" width="150"></td>
+          <td><img src="imagenes/poder.jpg" alt="Poder de la Luz" width="150"></td>
+          <td style="text-align:center;">No pilota una bestia divina</td>
+          <td>Zelda es la princesa de Hyrule y portadora del poder sagrado de la Luz, con el que mantiene encerrado a Ganon.</td>
+        </tr>
+
+        <!-- GANON -->
+        <tr>
+          <td><img src="imagenes/ganon.jpg" alt="Ganon" width="150"></td>
+          <td><img src="imagenes/poder oscuro.jpg" alt="Poder Oscuro de Ganon" width="150"></td>
+          <td style="text-align:center;">No tiene bestia divina</td>
+          <td>Ganon, conocido como la Calamidad, es la amenaza milenaria que busca destruir por completo el reino de Hyrule.</td>
+        </tr>
+
+      </table>
+    </section>
+
+    
+
+      <h3>Enlace externo</h3>
+      <p>
+        <a href="https://zelda.nintendo.com/breath-of-the-wild/" target="_blank" 
+           title="Página oficial del juego">
+           Sitio oficial de Zelda BOTW
+        </a>
+      </p>
+    </aside>
+
+    <!-- Ancla -->
+    <p><a href="#personajes" title="Volver al inicio de la página">Volver arriba</a></p>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Borja Herreros</p>
+  </footer>
+
+</body>
+</html>
+
+
