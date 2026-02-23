@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel mágico</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        #caja {
+            width: 300px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titulo">Bienvenidos al Panel mágico</h1>
+
+    <div id="caja">
+        <p id="texto">Texto inicial</p>
+    </div>
+
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+    <button onclick="cambiarColor()">Cambiar color</button>
+    <button onclick="crearParrafo()">Añadir párrafo</button>
+    <button onclick="borrarParrafo()">Borrar párrafo</button>
+
+    <script>
+        function cambiarTexto() {
+            const texto = document.getElementById("texto");
+            texto.textContent = "Texto cambiado";
+        }
+
+        function cambiarColor() {
+            const caja = document.getElementById("caja");
+            caja.style.backgroundColor = "yellow";
+        }
+
+        function crearParrafo() {
+            const caja = document.getElementById("caja");
+            const p = document.createElement("p");
+            const t = document.createTextNode("Nuevo párrafo");
+            p.appendChild(t);
+            caja.appendChild(p);
+        }
+
+        function borrarParrafo() {
+            const caja = document.getElementById("caja");
+            const ps = caja.getElementsByTagName("p");
+            if (ps.length > 1) {
+                const ultimo = ps[ps.length - 1];
+                caja.removeChild(ultimo);
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
