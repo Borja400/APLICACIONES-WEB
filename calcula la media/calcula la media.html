@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de notas</title>
+    <style>
+        .suspenso {
+            color: red;
+            font-weight: bold;
+        }
+        .aprobado {
+            color: green;
+            font-weight: bold;
+        }
+        .notable {
+            color: blue;
+            font-weight: bold;
+        }
+        .sobresaliente {
+            color: purple;
+            font-weight: bold;
+        }
+        .error {
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora de notas</h1>
+
+    <form id="formNotas" method="POST">
+        <label>
+            Nota 1:
+            <input type="number" id="nota1" min="0" max="10" step="0.1">
+        </label>
+        <br><br>
+
+        <label>
+            Nota 2:
+            <input type="number" id="nota2" min="0" max="10" step="0.1">
+        </label>
+        <br><br>
+
+        <label>
+            Nota 3:
+            <input type="number" id="nota3" min="0" max="10" step="0.1">
+        </label>
+        <br><br>
+
+        <button type="button" id="btnCalcular">Calcular nota final</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        const n1 = document.getElementById("nota1");
+        const n2 = document.getElementById("nota2");
+        const n3 = document.getElementById("nota3");
+        const btn = document.getElementById("btnCalcular");
+        const resultado = document.getElementById("resultado");
+
+        btn.addEventListener("click", function() {
+
+            resultado.classList.remove("error", "suspenso", "aprobado", "notable", "sobresaliente");
+
+            const v1 = Number(n1.value);
+            const v2 = Number(n2.value);
+            const v3 = Number(n3.value);
+
+            if (
+                n1.value === "" || n2.value === "" || n3.value === "" ||
+                v1 < 0 || v1 > 10 ||
+                v2 < 0 || v2 > 10 ||
+                v3 < 0 || v3 > 10
+            ) {
+                resultado.textContent = "Error: introduce notas válidas entre 0 y 10.";
+                resultado.classList.add("error");
+                return;
+            }
+
+            const media = (v1 + v2 + v3) / 3;
+            let texto = "";
+            
+            if (media < 5) {
+                texto = "suspenso";
+                resultado.classList.add("suspenso");
+            } else if (media < 7) {
+                texto = "aprobado";
+                resultado.classList.add("aprobado");
+            } else if (media < 9) {
+                texto = "notable";
+                resultado.classList.add("notable");
+            } else {
+                texto = "sobresaliente";
+                resultado.classList.add("sobresaliente");
+            }
+
+            resultado.textContent = "Nota media: " + media.toFixed(2) + " - " + texto;
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
