@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 2</title>
+</head>
+<body>
+
+<h2>Cambiar color de fondo</h2>
+
+<select id="colorFondo">
+    <option value="white">Blanco</option>
+    <option value="yellow">Amarillo</option>
+    <option value="lightblue">Azul claro</option>
+    <option value="pink">Rosa</option>
+</select>
+
+<button id="btnColor">Aplicar color</button>
+
+<script>
+document.getElementById("btnColor").addEventListener("click", function() {
+    const color = document.getElementById("colorFondo").value;
+    document.body.style.backgroundColor = color;
+});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 1</title>
+<style>
+.rojo { color: red; font-weight: bold; }
+.verde { color: green; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h2>Validar nombre obligatorio</h2>
+
+<input type="text" id="nombre">
+<button id="btnNombre">Comprobar</button>
+<p id="resNombre"></p>
+
+<script>
+document.getElementById("btnNombre").addEventListener("click", function() {
+    const nombre = document.getElementById("nombre").value;
+    const res = document.getElementById("resNombre");
+    res.classList.remove("rojo", "verde");
+
+    if (nombre === "" || nombre.length < 3) {
+        res.textContent = "El nombre es obligatorio";
+        res.classList.add("rojo");
+    } else {
+        res.textContent = "Nombre correcto";
+        res.classList.add("verde");
+    }
+});
+</script>
+
+</body>
+</html>

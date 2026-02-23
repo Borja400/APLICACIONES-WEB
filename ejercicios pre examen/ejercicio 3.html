@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 3</title>
+<style>
+.contador-rojo { color: red; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h2>Contador de caracteres</h2>
+
+<textarea id="texto" rows="4" cols="40"></textarea>
+<p id="contador">0 caracteres</p>
+
+<script>
+document.getElementById("texto").addEventListener("input", function() {
+    const texto = document.getElementById("texto").value;
+    const contador = document.getElementById("contador");
+
+    contador.textContent = texto.length + " caracteres";
+
+    if (texto.length > 100) {
+        contador.classList.add("contador-rojo");
+    } else {
+        contador.classList.remove("contador-rojo");
+    }
+});
+</script>
+
+</body>
+</html>
+

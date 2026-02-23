@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Semáforo interactivo</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        #semaforo {
+            width: 120px;
+            padding: 15px;
+            border: 2px solid black;
+            margin: 20px auto;
+        }
+
+        .luz {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: gray;
+            margin: 10px auto;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titulo">Semáforo</h1>
+
+    <div id="semaforo">
+        <div id="rojo" class="luz"></div>
+        <div id="amarillo" class="luz"></div>
+        <div id="verde" class="luz"></div>
+    </div>
+
+    <button onclick="ponerRojo()">Rojo</button>
+    <button onclick="ponerAmarillo()">Amarillo</button>
+    <button onclick="ponerVerde()">Verde</button>
+    <button onclick="apagar()">Apagar</button>
+
+    <script>
+        function limpiar() {
+            document.getElementById("rojo").style.backgroundColor = "gray";
+            document.getElementById("amarillo").style.backgroundColor = "gray";
+            document.getElementById("verde").style.backgroundColor = "gray";
+        }
+
+        function ponerRojo() {
+            limpiar();
+            document.getElementById("rojo").style.backgroundColor = "red";
+            document.getElementById("titulo").textContent = "Semáforo";
+        }
+
+        function ponerAmarillo() {
+            limpiar();
+            document.getElementById("amarillo").style.backgroundColor = "yellow";
+            document.getElementById("titulo").textContent = "Semáforo";
+        }
+
+        function ponerVerde() {
+            limpiar();
+            document.getElementById("verde").style.backgroundColor = "green";
+            document.getElementById("titulo").textContent = "Semáforo";
+        }
+
+        function apagar() {
+            limpiar();
+            document.getElementById("titulo").textContent = "Semáforo apagado";
+        }
+    </script>
+
+</body>
+</html>
+
+

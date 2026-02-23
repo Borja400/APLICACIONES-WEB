@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de energía</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        #maquina {
+            width: 300px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titulo">Máquina apagada</h1>
+
+    <div id="maquina">
+        <p id="mensaje">Pulsa un botón</p>
+    </div>
+
+    <button onclick="encender()">Encender</button>
+    <button onclick="apagar()">Apagar</button>
+    <button onclick="crearMensaje()">Añadir mensaje</button>
+    <button onclick="borrarMensaje()">Borrar mensaje</button>
+
+    <script>
+        function encender() {
+            document.getElementById("maquina").style.backgroundColor = "green";
+            document.getElementById("titulo").textContent = "Máquina encendida";
+            document.getElementById("mensaje").textContent = "La máquina está funcionando";
+        }
+
+        function apagar() {
+            document.getElementById("maquina").style.backgroundColor = "red";
+            document.getElementById("titulo").textContent = "Máquina apagada";
+            document.getElementById("mensaje").textContent = "La máquina está detenida";
+        }
+
+        function crearMensaje() {
+            const caja = document.getElementById("maquina");
+            const p = document.createElement("p");
+            const t = document.createTextNode("Mensaje extra");
+            p.appendChild(t);
+            caja.appendChild(p);
+        }
+
+        function borrarMensaje() {
+            const caja = document.getElementById("maquina");
+            const ps = caja.getElementsByTagName("p");
+
+            if (ps.length > 1) {
+                const ultimo = ps[ps.length - 1];
+                caja.removeChild(ultimo);
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+

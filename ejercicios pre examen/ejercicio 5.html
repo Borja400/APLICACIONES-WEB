@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 5</title>
+<style>
+.rojo { color: red; font-weight: bold; }
+.verde { color: green; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h2>Validar edad</h2>
+
+<input type="number" id="edad">
+<button id="btnEdad">Comprobar edad</button>
+<p id="resEdad"></p>
+
+<script>
+document.getElementById("btnEdad").addEventListener("click", function() {
+    const edad = Number(document.getElementById("edad").value);
+    const res = document.getElementById("resEdad");
+    res.classList.remove("rojo", "verde");
+
+    if (isNaN(edad) || edad === "") {
+        res.textContent = "Introduce una edad válida";
+        res.classList.add("rojo");
+        return;
+    }
+
+    if (edad < 18) {
+        res.textContent = "No tienes acceso";
+        res.classList.add("rojo");
+    } else {
+        res.textContent = "Acceso permitido";
+        res.classList.add("verde");
+    }
+});
+</script>
+
+</body>
+</html>
+
