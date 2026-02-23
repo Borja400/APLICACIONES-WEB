@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+   <meta charset="iso-8859-1" />
+   <title>Ejercicio 2</title>   
+</head>
+<body>
+
+<p id="p1">Primer párrafo</p>
+<p id="p2">Segundo párrafo</p>
+<p id="p3">Tercer párrafo</p>
+
+<script>
+function nuevoParrafo() {
+    var p = document.createElement("p");
+    var t = document.createTextNode("Nuevo párrafo");
+    p.appendChild(t);
+    document.body.appendChild(p);
+}
+
+function quitaParrafo() {
+    var ps = document.getElementsByTagName("p");
+    var ultimo = ps[ps.length - 1];
+    ultimo.parentNode.removeChild(ultimo);
+}
+
+document.getElementById("p1").onclick = nuevoParrafo;
+document.getElementById("p2").onclick = quitaParrafo;
+</script>
+
+</body>
+</html>
+
+
+

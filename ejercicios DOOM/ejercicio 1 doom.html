@@ -1,0 +1,29 @@
+﻿¡<html>
+<head>
+   <meta charset="iso-8859-1" />
+   <title>Ejercicio 1</title>   
+</head>
+<body>
+
+<p>Lorem ipsum <a href="http://prueba">uno</a> texto <a href="http://prueba2">dos</a></p>
+
+<p>Segundo párrafo <a href="http://prueba">tres</a> texto <a href="http://prueba3">cuatro</a></p>
+
+<p id="p3">Tercer párrafo <a href="http://prueba">cinco</a> texto <a href="http://prueba4">seis</a> más <a href="http://prueba5">siete</a></p>
+
+<script>
+var enlaces = document.getElementsByTagName("a");
+alert(enlaces.length);
+
+var primero = enlaces[0].href;
+alert(primero);
+
+var p3 = document.getElementById("p3");
+var enlacesP3 = p3.getElementsByTagName("a");
+alert(enlacesP3.length);
+</script>
+
+</body>
+</html>
+
+

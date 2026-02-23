@@ -1,0 +1,38 @@
+﻿<html>
+<head>
+   <meta charset="iso-8859-1" />
+   <title>Ejercicio 3</title>   
+</head>
+<body>
+
+<p id="p1">Primer párrafo</p>
+<p id="p2">Segundo párrafo</p>
+<p id="p3">Tercer párrafo</p>
+
+<input type="button" value="Cambiar color" onclick="cambiarColor()">
+<input type="button" value="Ocultar párrafo" onclick="ocultarParrafo()">
+<input type="button" value="Mostrar párrafo" onclick="mostrarParrafo()">
+
+<script>
+function cambiarColor() {
+    var p1 = document.getElementById("p1");
+    p1.style.backgroundColor = "yellow";
+}
+
+function ocultarParrafo() {
+    var p2 = document.getElementById("p2");
+    p2.style.display = "none";
+}
+
+function mostrarParrafo() {
+    var p2 = document.getElementById("p2");
+    p2.style.display = "block";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
